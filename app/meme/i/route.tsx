@@ -15,7 +15,7 @@ export async function GET(request : Request){
 
     if(text !== " "){
         console.log("test")
-        test = await fetch(`${process.env.DEFINED_POINT_BNS}${text}`)
+        test = await fetch(`https://fetch-api-mauve-iota.vercel.app/api/${text}`)
         .then((r)=>{
         return r.json()
         }).then((data)=> {return data})
